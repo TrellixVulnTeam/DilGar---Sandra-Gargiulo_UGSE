@@ -58,6 +58,30 @@ header{
     background-position: center;
     background-color: #B1D0E0;
 }
+.navbar {
+    margin-bottom: 0;
+    background-color: #f4511e;
+    z-index: 9999;
+    border: 0;
+    font-size: 12px !important;
+    line-height: 1.42857143 !important;
+    letter-spacing: 4px;
+    border-radius: 0;
+}
+.navbar li a, .navbar .navbar-brand {
+    color: #fff !important;
+}
+.navbar-nav li a:hover, .navbar-nav li.active a {
+    color: #f4511e !important;
+    background-color: #fff !important;
+}
+.navbar-default .navbar-toggle {
+    border-color: transparent;
+    color: #fff !important;
+}
+.navbar-light{
+    background-color: #B1D0E0;
+}
 .container-logo{
     background-size: cover;
 }
@@ -85,6 +109,7 @@ header{
     opacity: 0;
     transform: translateX(100px);}
 }
+/*
 .container-navbar{
     width: 100%;
     margin: auto;
@@ -111,7 +136,7 @@ header{
 .container-menu li > a:hover{
     background:#406882;
     color: #fff;
-}
+}*/
 
 /** BODY **/
 body{
@@ -122,9 +147,11 @@ body{
     min-height: 100vh;
     min-height: 100%;
 }
+
 /*presentacion de la empresa*/
 .content-main{
     margin: 20px;
+    padding: 20px;
     background-position: center center;
     background-image: url(../media/prest.jpg) no-repeat;
     background-size: cover;
@@ -144,6 +171,7 @@ body{
     position: relative;
 }
 .content p{
+    padding: 80px 120px;
     margin: 20px;
     font-weight: 100;
     line-height: 25px;
@@ -162,9 +190,9 @@ button{
 /*formulario*/
 .content-form{
     display: grid; 
-    grid-template-columns: 1fr 1fr 1fr; 
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));; 
     grid-template-rows: 1fr 1fr 1fr; 
-    gap: 0px 0px; 
+    grid-gap: 15px 15px; 
     grid-template-areas: 
     "form-img-r form-c form-img-l"
     "form-img-r form-c form-img-l"
@@ -183,11 +211,8 @@ button{
 .content-serv{
     display: grid; 
     grid-template-columns: 1fr 1fr 1fr; 
-    grid-template-rows: 1fr 1fr 1fr; 
     gap: 0px 0px; 
     grid-template-areas: 
-    "content-target-inst content-target-grup content-target-bob"
-    "content-target-inst content-target-grup content-target-bob"
     "content-target-inst content-target-grup content-target-bob";
 }
 .content-target-inst{
@@ -203,49 +228,67 @@ button{
     justify-content: center;
 }
 .content-target-img {
-    width: 250px;
+    width: 400; height: 300;
     background-color: white;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 .content-target-img img {
     width: 100%;
 }
-
+.thumbnail {
+    padding: 0 0 15px 0;
+    border: none;
+    border-radius: 0;
+  }
+.thumbnail p {
+    margin-top: 15px;
+    color: #555;
+}
+.btn {
+    padding: 10px 20px;
+    border: 2px solid #6998AB;
+    color: #6998AB;
+    border-radius: 0;
+    transition: .2s;
+}
+.btn:hover, .btn:focus {
+    border: 2px solid #6998AB;
+    background-color: #fff;
+    color: #6998AB;
+}
 /*galeria*/
-.content-gallery{
-    margin: 0;
+.gallery__item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #406882;
+    border-radius: 4px;
+    transition: transform 0.3s ease-in-out;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
-.gallery-container {
-  display: grid; 
-  grid-template-columns: 1fr 1fr 1fr 1fr; 
-  grid-template-rows: 1fr 1fr 1fr; 
-  gap: 0px 0px; 
-  grid-template-areas: 
-    "gallery__item__vertical gallery__item__img1 gallery__item__img2 gallery__item__img3"
-    "gallery__item__vertical gallery__item__img4 gallery__item_horizontal gallery__item_horizontal"
-    ". . . ."; 
+.gallery__item:hover{
+    filter: opacity(0.9);
+    transform: scale(1.04);
 }
-.gallery__item_horizontal { 
-    grid-area: hgallery__item_horizontal; 
+.content-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-auto-rows: minmax(200px, auto);
+    gap: 20px;
+    padding: 20px;
+    grid-auto-flow: dense;
 }
-.gallery__item__vertical { 
-    grid-area: gallery__item__vertical; 
+@media (min-width: 600px) { 
+    .wide {
+        grid-column: span 2;
+    }
+    .tall{
+        grid-row: span 2;
+    }
 }
-.gallery__item__img1 { 
-    grid-area: gallery__item__img1; 
-}
-.gallery__item__img2 { 
-    grid-area: gallery__item__img2; 
-}
-.gallery__item__img3 { 
-    grid-area: gallery__item__img3; 
-}
-.gallery__item__img4 { 
-    grid-area: gallery__item__img4; 
-}
-.gallery__img{
-    height: 120px;
-}
+
 /** FOOTER **/
 footer {  
     align-self: flex-end;
@@ -261,7 +304,6 @@ footer {
     margin-left: auto;
     margin-right: auto;
 }
-
 .ico-social{
     list-style: none;
     display: inline-block;
