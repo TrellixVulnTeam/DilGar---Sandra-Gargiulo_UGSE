@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap');
+html{
+    height: 100%;
+    &:after, &:before{
+        margin: 0;
+        padding: 0;
+    }
+    box-sizing: border-box;
+    --tw-shadow: 0 0 transparent;
+    --tw-ring-inset: var(--tw-empty, );
+    --tw-ring-offset-width: 0px;
+    --tw-ring-offset-color: #fff;
+    --tw-ring-color: rgba(59,130,246,0.5);
+    --tw-ring-offset-shadow: 0 0 transparent;
+    --tw-ring-shadow: 0 0 transparent;
+    border-color: currentColor;
+    @import 'header';
+    body{
+        font-family: 'Nunito', sans-serif;
+        margin: 0;
+        padding: 0;
+        flex-wrap: wrap;
+        min-height: 100vh;
+        min-height: 100%;
+    }
+    @import 'main';
+    @import 'footer';
+}
