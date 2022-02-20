@@ -64,7 +64,7 @@ html header .navbar li .active a {
   color: #f4511e !important;
   background-color: #fff !important;
 }
-html header .navbar .navbar-default .navbar-toggle {
+html header .navbar .navbar-default, html header .navbar .navbar-toggle {
   border-color: transparent;
   color: #fff !important;
 }
@@ -186,6 +186,10 @@ html .content-gallery {
   gap: 20px;
   padding: 20px;
   grid-auto-flow: dense;
+}
+html .card-body .card-title {
+  text-align: center;
+  font-weight: bold;
 }
 html footer {
   align-self: flex-end;
