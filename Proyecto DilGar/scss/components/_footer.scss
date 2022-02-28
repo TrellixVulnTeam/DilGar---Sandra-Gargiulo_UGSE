@@ -4,6 +4,7 @@ footer {
     text-align: center;
     width: 100%;
     background-image: linear-gradient(#406882, #6998AB);
+    background-color: #929fba;
     .footer-body{
         display: flow-root;
         box-sizing: content-box;
@@ -12,9 +13,13 @@ footer {
         margin-right: auto;
     }
     .ico-social{
-        list-style: none;
+        font-size: 20px;
         display: inline-block;
         margin: 0 20px;
         width: 3%;
+    }
+    .fab{
+        text-decoration: none;
+        color: #FFF;
     }
 }
