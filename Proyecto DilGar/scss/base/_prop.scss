@@ -1,0 +1,28 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    font-family: $fuente1;
+    background-color: linear-gradient(map-get($bluescale,"800"));
+    color: linear-gradient(map-get($bluescale,"100")); 
+}
+
+h1{
+    @include prop (0,$fuente2,0,0,3rem);   
+    text-align: center;    
+}
+h2{
+    @include prop (0,$fuente2,0,0,2.5rem)      
+}
+
+h3{
+    @include prop (0,$fuente2,0,0,2rem)
+    
+}
+h4,p,ul{
+    @include prop (0,$fuente3,0,0,2rem);
+    margin-block-start: 0;
+    margin-block-end: 0;
+}

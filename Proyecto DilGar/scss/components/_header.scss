@@ -1,8 +1,9 @@
+@import 'base/maps';
 header{
     width: 100%;
     overflow: hidden;
     background-position: center;
-    background-color: #B1D0E0;
+    background-color: map-get($bluescale, 200);
     .grid-conteiner > *{
         box-shadow: -1px 1px 7px 0px rgba(0,0,0,0.75);
         border-radius: 4px;
@@ -39,7 +40,6 @@ header{
     }
     .navbar{
         margin-bottom: 0;
-        background-color: #f4511e;
         z-index: 9999;
         border: 0;
         font-size: 12px !important;
@@ -49,23 +49,21 @@ header{
         li{
             a{
                 &:hover{
-                    color: #f4511e !important;
-                    background-color: #fff !important;
+                    background-color: map-get($bluescale,"100") !important;
                 }
             }
             .active{
                 a{
-                    color: #f4511e !important;
-                    background-color: #fff !important;
+                    background-color: map-get($bluescale,"100") !important;
                 }
             }
         }
         .navbar-default, .navbar-toggle {
             border-color: transparent;
-            color: #fff !important;
+            color: map-get($bluescale,"100") !important;
         }
         .navbar-light{
-            background-color: #B1D0E0;
+            background-color: map-get($bluescale, 400);
         }
     }
     .conteiner-logo{
