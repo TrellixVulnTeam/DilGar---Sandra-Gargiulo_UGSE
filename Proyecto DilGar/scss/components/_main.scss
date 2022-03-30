@@ -75,7 +75,16 @@ button{
         filter: opacity(0.9);
         transform: scale(1.04);
     }
+    @media (min-width: 600px) { 
+        .wide {
+            grid-column: span 2;
+        }
+        .tall{
+            grid-row: span 2;
+        }
+    }
 }
+
 .content-gallery {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));

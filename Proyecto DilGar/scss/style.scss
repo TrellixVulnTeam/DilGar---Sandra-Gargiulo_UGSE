@@ -3,29 +3,7 @@
 @import 'base/maxin';
 @import 'base/prop';
 @import 'base/variables';
-html{
-    height: 100%;
-    &:after, &:before{
-        margin: 0;
-        padding: 0;
-    }
-    box-sizing: border-box;
-    --tw-shadow: 0 0 transparent;
-    --tw-ring-inset: var(--tw-empty, );
-    --tw-ring-offset-width: 0px;
-    --tw-ring-offset-color: #fff;
-    --tw-ring-color: rgba(59,130,246,0.5);
-    --tw-ring-offset-shadow: 0 0 transparent;
-    --tw-ring-shadow: 0 0 transparent;
-    border-color: currentColor;
-    @import 'components/header';
-    body{
-        margin: 0;
-        padding: 0;
-        flex-wrap: wrap;
-        min-height: 100vh;
-        min-height: 100%;
-    }
-    @import 'components/main';
-    @import 'components/footer';
-}
+@import 'components/body';
+@import 'components/header';
+@import 'components/main';
+@import 'components/footer';
